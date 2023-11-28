@@ -1,0 +1,33 @@
+
+<h4 class="text-center"appDynamicStyle>Product List</h4>
+<div class="container ">
+
+<table class="table  table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Sr No </th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let product of productList;let i=index">
+            <ng-container *ngIf=""product.price> 5000>
+          <th scope="row">{{i}}</th>
+          <td>{{product.productName}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+        </ng-container>
+        </tr>  -->
+
+        
+          <tr *ngFor="let product of productList;let i=index;let o=odd;let e=even" [ngClass]="o ? 'bg':'bg-one'">
+           <th scope="row">{{i}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
